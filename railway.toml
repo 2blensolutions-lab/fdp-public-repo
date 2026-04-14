@@ -1,0 +1,10 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "python run_all.py"
+
+# Cron: todos los días a las 8:00 AM Argentina (UTC-3 = 11:00 UTC)
+[[cronjobs]]
+schedule = "0 11 * * *"
+command  = "python run_all.py"
