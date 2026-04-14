@@ -1,0 +1,19 @@
+# Credenciales — NUNCA subir al repo
+.env
+credentials.json
+
+# Outputs generados — no versionar
+2_payway/
+3_cupones/
+4_conciliacion/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
