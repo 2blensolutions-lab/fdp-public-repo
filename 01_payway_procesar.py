@@ -23,7 +23,7 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 # Config de rutas
 # ---------------------------------------------------------------------------
 BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
-INPUT_DIR  = os.path.join(BASE_DIR, ".csvs")
+INPUT_DIR  = os.path.join(BASE_DIR, "csvs")
 OUTPUT_DIR = os.path.join(BASE_DIR, "2_payway")
 
 # ---------------------------------------------------------------------------
