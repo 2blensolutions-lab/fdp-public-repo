@@ -1,0 +1,7 @@
+pandas==2.2.3
+openpyxl==3.1.5
+requests==2.32.3
+paramiko==3.5.0
+python-dotenv==1.0.1
+google-auth==2.37.0
+google-api-python-client==2.165.0
