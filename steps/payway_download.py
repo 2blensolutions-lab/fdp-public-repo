@@ -114,17 +114,19 @@ def descargar_sociedad(
 
     print(f"  Conectando SFTP — {nombre_soc} ({usuario})...")
 
-    # Cargar la private key desde el string (formato OpenSSH)
+# Normalizar saltos de línea — Railway guarda \n como literal "\\n"
     import io as _io
+    key_str = key_str.replace("\\n", "\n").strip()
+
     key_file = _io.StringIO(key_str)
     try:
         pkey = paramiko.Ed25519Key.from_private_key(key_file)
     except paramiko.ssh_exception.SSHException:
-        key_file.seek(0)
+        key_file = _io.StringIO(key_str)
         try:
             pkey = paramiko.RSAKey.from_private_key(key_file)
         except paramiko.ssh_exception.SSHException:
-            key_file.seek(0)
+            key_file = _io.StringIO(key_str)
             pkey = paramiko.ECDSAKey.from_private_key(key_file)
 
     transport = paramiko.Transport((SFTP_HOST, SFTP_PORT))
