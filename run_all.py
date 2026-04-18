@@ -20,6 +20,13 @@ Cron en Railway: 0 11 * * * (8hs ARG)
 
 import os
 import sys
+
+# DEBUG TEMPORAL — borrar después del primer run exitoso
+key = os.getenv("PAYWAY_KEY_1", "")
+print(f"KEY_1 longitud: {len(key)}")
+print(f"KEY_1 repr primeros 100: {repr(key[:100])}")
+print(f"KEY_1 repr últimos 50: {repr(key[-50:])}")
+
 import traceback
 from datetime import date
 
