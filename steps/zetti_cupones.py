@@ -247,6 +247,7 @@ def run(fecha: date, output_todos: str, output_resumen: str) -> tuple[str, str, 
 
     # 3. Unir válidos + anulados con monto negativo
     df_procesados = pd.concat([df_validos, df_anulados], ignore_index=True)
+    print(f"  Tarjetas únicas antes de excluir: {sorted(df_procesados['tarjeta_nombre'].dropna().unique())}")
 
     # 4. Excluir tarjetas que no concilian
     mask_excluidas = df_procesados["tarjeta_nombre"].str.upper().isin(
