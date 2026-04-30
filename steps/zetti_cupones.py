@@ -3,7 +3,7 @@ steps/zetti_cupones.py — Descarga cupones de Zetti para la fecha indicada
 Doblen Solutions x Farmacias del Pueblo
 
 Filtros aplicados:
-  - Estado INGR / INGRESADO: se incluyen con monto positivo
+  - Estado INGR / INGRESADO / AGRUP: se incluyen con monto positivo
   - Anulados (ANULADO / ANULADOR): se incluyen con monto NEGATIVO
   - UNIFICADO, MODIF y cualquier otro estado: se excluyen
 
@@ -34,7 +34,7 @@ ZETTI_USERNAME      = os.getenv("ZETTI_USERNAME",      "DOBLENAPI")
 ZETTI_PASSWORD      = os.getenv("ZETTI_PASSWORD",      "")
 
 # Estados que se incluyen con monto positivo
-ESTADOS_VALIDOS = {"INGR", "INGRESADO"}
+ESTADOS_VALIDOS = {"INGR", "INGRESADO", "AGRUP"}
 
 # Valores del campo anulado que se incluyen con monto negativo
 ANULADOS_NEGATIVOS = {"ANULADO", "ANULADOR"}
