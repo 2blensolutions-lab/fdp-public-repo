@@ -41,6 +41,9 @@ MAPA_SUCURSALES = {
     "FCIA SAN MARTIN NQN":               "san martin",
     "FCIA SENILLOSA":                    "senillosa",
     "FCIA ZAPALA NQN":                   "zapala",
+    "FCIA PLOTTIER 2 NQN": "plottier 2",
+    "FCIA PLOTTIER 3 NQN": "plottier 3",
+    "FCIA SENILLOSA NQN":  "senillosa",
 }
 
 
