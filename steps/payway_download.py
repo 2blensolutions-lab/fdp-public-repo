@@ -141,10 +141,10 @@ def descargar_sociedad(sociedad: dict, fecha: date, local_path: str) -> str:
         nombre_remoto = _buscar_archivo(sftp, fecha)
 
         if nombre_remoto is None:
-            raise FileNotFoundError(
+            raise SinDatosException(
                 f"No se encontró archivo Simil_Lote con fecha {fecha.isoformat()} "
                 f"en {SFTP_PATH} para {nombre_soc} ({usuario}). "
-                f"Verificar que Payway haya generado el reporte."
+                f"Probablemente es un día sin actividad (feriado o fin de semana)."
             )
 
         ruta_remota = f"{SFTP_PATH}/{nombre_remoto}"
